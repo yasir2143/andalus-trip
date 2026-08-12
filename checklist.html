@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>قائمة الحجوزات — درب الأندلس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0E5C56; --teal-dark:#093F3B; --clay:#C1502E; --gold:#C9A227;
+    --cream:#FBF6EC; --paper:#F3EAD3; --ink:#211C14; --ink-soft:#4A4237; --line:#DCCFA9;
+    --green:#16A34A; --green-bg:#F0FDF4;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{ background:var(--cream); color:var(--ink); font-family:'Cairo', sans-serif; line-height:1.7; }
+  h1,h2,h3{ font-family:'Markazi Text', serif; }
+  a{ color:inherit; }
+
+  header{ background:linear-gradient(180deg, var(--teal-dark), var(--teal)); color:#fff;
+    padding:40px 20px 30px; text-align:center; }
+  header h1{ font-size:clamp(1.9rem,5vw,2.6rem); margin-bottom:8px; }
+  header p{ color:#E8DFC4; font-size:.9rem; max-width:500px; margin:0 auto 16px; }
+  .back-link{ display:inline-block; color:var(--gold); font-weight:700; text-decoration:none;
+    border-bottom:1.5px solid var(--gold); font-size:.85rem; }
+
+  .progress-wrap{ max-width:600px; margin:-20px auto 0; padding:0 20px; position:relative; z-index:5; }
+  .progress-card{ background:#fff; border-radius:14px; padding:18px 22px; box-shadow:0 6px 20px rgba(0,0,0,.1); }
+  .progress-text{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; font-size:.85rem; font-weight:700; }
+  .progress-bar-bg{ background:var(--paper); border-radius:999px; height:10px; overflow:hidden; }
+  .progress-bar-fill{ background:var(--green); height:100%; border-radius:999px; transition:width .3s; width:0%; }
+
+  .container{ max-width:600px; margin:0 auto; padding:30px 20px 60px; }
+  .category{ margin-bottom:28px; }
+  .category h3{ font-size:1.15rem; color:var(--teal-dark); margin-bottom:12px; padding-bottom:6px; border-bottom:2px solid var(--gold); }
+
+  .item{ display:flex; align-items:center; gap:12px; background:#fff; border:1px solid var(--line);
+    border-radius:12px; padding:13px 16px; margin-bottom:8px; cursor:pointer; transition:.15s; }
+  .item:hover{ border-color:var(--clay); }
+  .item.checked{ background:var(--green-bg); border-color:var(--green); }
+  .checkbox{ width:26px; height:26px; border-radius:50%; border:2px solid var(--line); flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-size:.95rem; font-weight:800; color:#fff; transition:.15s; }
+  .item.checked .checkbox{ background:var(--green); border-color:var(--green); }
+  .item-text{ flex:1; }
+  .item-text b{ display:block; font-size:.92rem; }
+  .item-text span{ display:block; font-size:.74rem; color:var(--ink-soft); margin-top:1px; }
+  .item.checked .item-text b{ text-decoration:line-through; color:var(--ink-soft); }
+
+  footer{ text-align:center; padding:24px; color:var(--ink-soft); font-size:.8rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>✅ قائمة الحجوزات</h1>
+  <p>علّم كل شي حجزته — الموقع الرئيسي بينبّهك لو فيه شي باقي</p>
+  <a class="back-link" href="درب_الأندلس.html">← ارجع لخط سير الرحلة</a>
+</header>
+
+<div class="progress-wrap">
+  <div class="progress-card">
+    <div class="progress-text">
+      <span>نسبة الإنجاز</span>
+      <span id="progressLabel">0 / 0</span>
+    </div>
+    <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressBar"></div></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="category">
+    <h3>✈️ الطيران والتنقل</h3>
+    <div class="item" data-key="flight"><div class="checkbox"></div><div class="item-text"><b>تذاكر الطيران (رياض ↔ مدريد)</b><span>25 سبتمبر – 5 أكتوبر</span></div></div>
+    <div class="item" data-key="idp"><div class="checkbox"></div><div class="item-text"><b>رخصة القيادة الدولية (IDP)</b><span>من إدارة المرور بالسعودية</span></div></div>
+    <div class="item" data-key="car"><div class="checkbox"></div><div class="item-text"><b>السيارة المستأجرة</b><span>من مطار مدريد، طول الرحلة</span></div></div>
+  </div>
+
+  <div class="category">
+    <h3>🏨 الفنادق</h3>
+    <div class="item" data-key="hotel-madrid1"><div class="checkbox"></div><div class="item-text"><b>فندق مدريد (البداية)</b><span>25-26 سبتمبر · ليلتان</span></div></div>
+    <div class="item" data-key="hotel-granada"><div class="checkbox"></div><div class="item-text"><b>فندق غرناطة</b><span>27-28 سبتمبر · ليلتان</span></div></div>
+    <div class="item" data-key="hotel-sevilla"><div class="checkbox"></div><div class="item-text"><b>فندق إشبيلية</b><span>29-30 سبتمبر · ليلتان</span></div></div>
+    <div class="item" data-key="hotel-cordoba"><div class="checkbox"></div><div class="item-text"><b>فندق قرطبة</b><span>1-2 أكتوبر · ليلتان</span></div></div>
+    <div class="item" data-key="hotel-madrid2"><div class="checkbox"></div><div class="item-text"><b>فندق مدريد (النهاية)</b><span>3-4 أكتوبر · ليلتان</span></div></div>
+  </div>
+
+  <div class="category">
+    <h3>🎫 التذاكر والفعاليات</h3>
+    <div class="item" data-key="alhambra"><div class="checkbox"></div><div class="item-text"><b>تذكرة الحمراء (العام الذهبي)</b><span>الاثنين 28 سبتمبر · موعد 12:00</span></div></div>
+    <div class="item" data-key="alcazar"><div class="checkbox"></div><div class="item-text"><b>الريال ألكاثار — إشبيلية</b><span>مواعيد محدودة، تنفد بالموسم</span></div></div>
+    <div class="item" data-key="mezquita"><div class="checkbox"></div><div class="item-text"><b>مسجد-كاتدرائية قرطبة</b><span>اختياري — دخول مجاني 8:30-9:30ص متاح</span></div></div>
+    <div class="item" data-key="medina"><div class="checkbox"></div><div class="item-text"><b>مدينة الزهراء — قرطبة</b><span>اختياري، يحتاج حجز موعد</span></div></div>
+    <div class="item" data-key="flamenco"><div class="checkbox"></div><div class="item-text"><b>عرض فلامنكو — إشبيلية</b><span>اختياري، احجز مكانك مسبقًا</span></div></div>
+  </div>
+
+</div>
+
+<footer>درب الأندلس — قائمة الحجوزات. كل تعديل يُحفظ تلقائيًا بمتصفحك.</footer>
+
+<script>
+(function(){
+  const KEY = "andalus_booking_checklist_v1";
+  const items = document.querySelectorAll('.item');
+  const progressBar = document.getElementById('progressBar');
+  const progressLabel = document.getElementById('progressLabel');
+
+  function loadState(){
+    try{ return JSON.parse(localStorage.getItem(KEY)) || {}; }catch(e){ return {}; }
+  }
+  function saveState(state){ localStorage.setItem(KEY, JSON.stringify(state)); }
+
+  // Default: flight and Alhambra pre-checked (already confirmed booked)
+  let state = loadState();
+  if(Object.keys(state).length === 0){
+    state = { flight: true, alhambra: true };
+    saveState(state);
+  }
+
+  function updateProgress(){
+    const total = items.length;
+    const done = Array.from(items).filter(i => i.classList.contains('checked')).length;
+    progressBar.style.width = (total? (done/total*100):0) + '%';
+    progressLabel.textContent = `${done} / ${total}`;
+  }
+
+  items.forEach(item => {
+    const key = item.dataset.key;
+    if(state[key]) item.classList.add('checked');
+    item.addEventListener('click', () => {
+      item.classList.toggle('checked');
+      state[key] = item.classList.contains('checked');
+      saveState(state);
+      updateProgress();
+    });
+  });
+
+  updateProgress();
+})();
+</script>
+
+</body>
+</html>

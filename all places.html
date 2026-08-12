@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كل الأماكن — درب الأندلس</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@600;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#0E5C56; --teal-dark:#093F3B; --clay:#C1502E; --gold:#C9A227;
+    --cream:#FBF6EC; --paper:#F3EAD3; --ink:#211C14; --ink-soft:#4A4237; --line:#DCCFA9;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{ background:var(--cream); color:var(--ink); font-family:'Cairo', sans-serif; line-height:1.7; }
+  h1,h2,h3{ font-family:'Markazi Text', serif; }
+  a{ color:inherit; }
+
+  header{ background:linear-gradient(180deg, var(--teal-dark), var(--teal)); color:var(--cream);
+    padding:44px 20px 36px; text-align:center; }
+  header h1{ font-size:clamp(2rem,5vw,3rem); margin-bottom:8px; }
+  header p{ color:#E8DFC4; font-size:.95rem; max-width:600px; margin:0 auto 18px; }
+  .back-link{ display:inline-block; color:var(--gold); font-weight:700; text-decoration:none; border-bottom:1.5px solid var(--gold); font-size:.88rem; }
+
+  .tabs{ position:sticky; top:0; z-index:20; background:var(--cream); border-bottom:2px solid var(--line);
+    display:flex; justify-content:center; gap:8px; padding:14px 12px; flex-wrap:wrap; }
+  .tab-btn{ font-family:'Cairo',sans-serif; font-weight:700; font-size:.95rem; padding:9px 22px; border-radius:999px;
+    border:2px solid var(--teal); background:#fff; color:var(--teal-dark); cursor:pointer; transition:.15s; }
+  .tab-btn.active, .tab-btn:hover{ background:var(--teal); color:#fff; }
+
+  .container{ max-width:1100px; margin:0 auto; padding:30px 20px 60px; }
+  .city-heading{ font-size:2.2rem; color:var(--teal-dark); margin-bottom:22px; padding-bottom:10px; border-bottom:2px solid var(--gold); }
+
+  .cat-block{ margin-bottom:34px; }
+  .cat-block h3{ font-size:1.15rem; color:var(--clay); margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+  .cat-block .count{ font-family:'Cairo',sans-serif; font-size:.78rem; color:var(--ink-soft); font-weight:400; }
+
+  .place-grid{ list-style:none; display:grid; grid-template-columns:repeat(auto-fill, minmax(240px,1fr)); gap:8px 16px; }
+  .place-grid li a{ display:block; background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 14px;
+    text-decoration:none; font-size:.88rem; transition:.15s; }
+  .place-grid li a:hover{ border-color:var(--clay); background:var(--paper); }
+  .place-grid .tag{ display:block; font-size:.74rem; color:var(--ink-soft); margin-top:2px; }
+
+  footer{ text-align:center; padding:30px; color:var(--ink-soft); font-size:.85rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>كل الأماكن</h1>
+  <p>القائمة الكاملة لكل مطعم وكوفي ومحل شاهي ومعلم تاريخي وموقف — مجمّعة حسب المدينة عشان تقدر تقارن وتختار بسهولة.</p>
+  <a class="back-link" href="index3.html">← ارجع لخط سير الرحلة</a>
+</header>
+
+<nav class="tabs">
+<button class="tab-btn active" data-city="city-Madrid">مدريد</button>
+<button class="tab-btn" data-city="city-Cordoba">قرطبة</button>
+<button class="tab-btn" data-city="city-Sevilla">إشبيلية</button>
+<button class="tab-btn" data-city="city-Granada">غرناطة</button>
+
+</nav>
+
+<div class="container">
+
+  <section class="city-panel" id="city-Madrid" style="display:block">
+    <h2 class="city-heading">مدريد</h2>
+    
+        <div class="cat-block">
+          <h3>🍽 المطاعم <span class="count">(54)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=BOTIN%20Restaurant%20Madrid">🏛 BOTIN Restaurant<span class="tag">Oldest restaurant in world 1725</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Casa%20Alberto%20Madrid">🏛 Casa Alberto<span class="tag">Historic tavern since 1827</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Mi%20Venta%20Madrid">La Mi Venta<span class="tag">Spanish grill</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Asado%20Central%20Madrid">Asado Central<span class="tag">Argentinian steakhouse</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Taberna%20El%20Sur%20Madrid">Taberna El Sur<span class="tag">Traditional tapas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Taberna%20La%20Fragua%20de%20Vulcano%20Madrid">Taberna La Fragua de Vulcano<span class="tag">Near Plaza Mayor</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Los%20Montes%20de%20Galicia%20Madrid">Los Montes de Galicia<span class="tag">Galician seafood</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rosi%20La%20Loca%20Madrid">Rosi La Loca<span class="tag">Modern tapas fusion</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Gloria%20Bendita%20Madrid">Gloria Bendita<span class="tag">Healthy modern tapas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Mi%20Venta%20Marina%20Madrid">La Mi Venta Marina<span class="tag">Spanish grill Plaza Marina</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bodega%20de%20los%20Secretos%20Madrid">Bodega de los Secretos<span class="tag">Historic vaulted cellar dining</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Atico%20Restaurante%20Terraza%20Madrid">Atico Restaurante Terraza<span class="tag">Mediterranean rooftop terrace</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Inclan%20Brutal%20Bar%20Madrid">Inclan Brutal Bar<span class="tag">Spanish Korean fusion near Sol</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Vinitus%20Gran%20Via%20Madrid">Vinitus Gran Via<span class="tag">Tapas Gran Via</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Angelita%20Madrid%20Madrid">Angelita Madrid<span class="tag">Farm to table cocktail bar</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bloved%20Restaurante%20Madrid">Bloved Restaurante<span class="tag">Gran Via fine dining</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=PARSI%20Persian%20Halal%20Restaurant%20Madrid">PARSI Persian Halal Restaurant<span class="tag">No pork Persian cuisine</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Aladino%20Madrid">Restaurante Aladino<span class="tag">Authentic Moroccan Arabic since 2001</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Gram%20Bangla%20Restaurant%20Madrid">Gram Bangla Restaurant<span class="tag">Halal Bangladeshi</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Steak%20Grill%20House%20Halal%20Madrid">Steak Grill House Halal<span class="tag">Generous halal grill portions</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Al%20Mounia%20Restaurante%20Marroqui%20Madrid">Al Mounia Restaurante Marroqui<span class="tag">Upscale Moroccan fine dining</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Swiss%20Butter%20Madrid">Swiss Butter<span class="tag">Halal steak specialist</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Beytna%20Madrid">Beytna<span class="tag">Excellent Lebanese Jordanian</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Halal%20Friends%20Burgers%20Madrid">Halal Friends Burgers<span class="tag">100 percent halal smash burgers</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20KHELCOM%20Madrid">Restaurante KHELCOM<span class="tag">Senegalese halal cuisine</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Megha%20Halal%20Cuisine%20Madrid">Megha Halal Cuisine<span class="tag">No alcohol Bangladeshi halal</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Shawarma%20Capital%20Madrid">Shawarma Capital<span class="tag">Best shawarma in Madrid</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=The%20Matbah%20Madrid">The Matbah<span class="tag">Clean fresh kebab falafel</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hiper%20Halal%20Madrid%20Madrid">Hiper Halal Madrid<span class="tag">Halal butcher and grocery Lavapies</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=HALAL%20FOOD%20Puerta%20del%20Sol%20Madrid">HALAL FOOD Puerta del Sol<span class="tag">Central near Sol fully halal</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pakistani%20Restaurante%20Madrid">Pakistani Restaurante<span class="tag">Pakistani Indian Persian halal</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rasif%20Lebanese%20Madrid">Rasif Lebanese<span class="tag">Lebanese street food gem</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Abu%20Taha%20Authentic%20Syrian%20Madrid">Abu Taha Authentic Syrian<span class="tag">Authentic Syrian Tetuan</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Em%20Sherif%20Madrid%20Madrid">Em Sherif Madrid<span class="tag">Upscale Lebanese fine dining</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Salwa%20Cocina%20Libanesa%20Madrid">Salwa Cocina Libanesa<span class="tag">Excellent Lebanese Gran Via</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Bel%20Mondo%20Madrid">Restaurante Bel Mondo<span class="tag">Stunning decor truffle pasta</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Villa%20Capri%20Madrid">Villa Capri<span class="tag">Authentic Italian tiramisu</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=My%20Pasta%20My%20Art%20Madrid">My Pasta My Art<span class="tag">Custom pasta cozy elegant</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Beata%20Pasta%20Madrid">Beata Pasta<span class="tag">Best gelato fresh pasta</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Oven%20Mozzarella%20Gran%20Via%20Madrid">Oven Mozzarella Gran Via<span class="tag">Central pizza fast delicious</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Comida%20Hindu%20Namaste%20India%20Madrid">Comida Hindu Namaste India<span class="tag">Best Indian in Madrid vegetarian</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Surat%20Indian%20Cuisine%20Madrid">Surat Indian Cuisine<span class="tag">Halal biryani near Gran Via</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Rajkot%20Indian%20Cuisine%20Madrid">Rajkot Indian Cuisine<span class="tag">Amazing korma cozy central</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Masala%20Darbar%20Madrid%20Madrid">Masala Darbar Madrid<span class="tag">Best Indian food fast service</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Tandoori%20Station%20Madrid">Tandoori Station<span class="tag">Best tandoori in Spain</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Indian%20Aroma%20Madrid">Indian Aroma<span class="tag">Top rated authentic flavors</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Tennessee%20BBQ%20Madrid">Tennessee BBQ<span class="tag">Best American BBQ burgers</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=RIBS%20ABADA%20Madrid">RIBS ABADA<span class="tag">American style ribs burgers</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Juanchos%20BBQ%20Malasana%20Madrid">Juanchos BBQ Malasana<span class="tag">Award winning cheeseburger</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Lord%20of%20the%20Wings%20Madrid">Lord of the Wings<span class="tag">Best wings burgers Gran Via</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pueblo%20Grill%20Asador%20Argentino%20Madrid">Pueblo Grill Asador Argentino<span class="tag">Argentine grill empanadas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Carvone%20Grill%20Steakhouse%20Madrid">Carvone Grill Steakhouse<span class="tag">Excellent Argentine steaks</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Tapa%20Tapa%20Montera%20Madrid">Tapa Tapa Montera<span class="tag">Classic tapas central</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Minibar%20Madrid">El Minibar<span class="tag">Creative tapas award winning</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>☕ الكوفيهات ومحلات الشاهي <span class="count">(28)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Chocolateria%20San%20Gines%20Madrid">🏛 Chocolateria San Gines<span class="tag">Churros since 1894</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Gran%20Cafe%20Gijon%20Madrid">🏛 Gran Cafe Gijon<span class="tag">Classic literary cafe</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cafe%20Comercial%20Madrid">🏛 Cafe Comercial<span class="tag">136 years old</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cafelito%20Madrid">Cafelito<span class="tag">Specialty coffee</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cafe%20de%20la%20Luz%20Madrid">Cafe de la Luz<span class="tag">Cozy decor</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Coffee%20and%20Stories%20Madrid">Coffee and Stories<span class="tag">Salamanca specialty coffee</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hola%20Coffee%20Lagasca%20Madrid">Hola Coffee Lagasca<span class="tag">Top European rated cafe</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bendita%20Locura%20Coffee%20Madrid">Bendita Locura Coffee<span class="tag">Brunch and coffee</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=BUNA%20Specialty%20Coffee%20Madrid">BUNA Specialty Coffee<span class="tag">5-star rated cookies coffee</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=East%20Crema%20Coffee%20Madrid">East Crema Coffee<span class="tag">Salamanca specialty coffee</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hey%20My%20Coffee%20Goya%20Madrid">Hey My Coffee Goya<span class="tag">Roastery multiple origins</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Madremia%20Retiro%20Madrid">Madremia Retiro<span class="tag">Best croissants bakery</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Religion%20Coffee%20Shop%20Madrid">Religion Coffee Shop<span class="tag">Corner specialty cafe</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Utopico%20Specialty%20Coffee%20Madrid">Utopico Specialty Coffee<span class="tag">Kunafe and baklava cafe</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Norah%20Coffee%20Brunch%20Madrid">Norah Coffee Brunch<span class="tag">Dog friendly brunch cafe</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Loca%20Obsesion%20Malasana%20Madrid">Loca Obsesion Malasana<span class="tag">Top brunch spot</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cocuiza%20Brunch%20Chueca%20Madrid">Cocuiza Brunch Chueca<span class="tag">Fresh healthy brunch</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bucolico%20Cafe%20Madrid">Bucolico Cafe<span class="tag">Popular breakfast toast</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pan%20y%20Pepinillos%20Cafe%20Madrid">Pan y Pepinillos Cafe<span class="tag">Cozy specialty coffee</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Le%20Praline%20Brunch%20Madrid">Le Praline Brunch<span class="tag">Best bagels brunch</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=EatMyTrip%20Malasana%20Madrid">EatMyTrip Malasana<span class="tag">Brunch and dinner cafe</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Santa%20Eulalia%20Bakery%20Madrid">🏛 Santa Eulalia Bakery<span class="tag">Excellent pastries near Plaza Opera</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Alma%20Nomad%20Bakery%20Madrid">Alma Nomad Bakery<span class="tag">Best almond croissant Chamberi</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Santo%20Bakehouse%20Madrid">Santo Bakehouse<span class="tag">Best bread Malasana neighborhood</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Mallorquina%20Madrid">🏛 La Mallorquina<span class="tag">Iconic pastry shop since 1894 Puerta del Sol</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Capi%20Casa%20Pistacho%20Madrid">Capi Casa Pistacho<span class="tag">Turkish baklava and delights</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Duqesita%20Madrid">🏛 La Duqesita<span class="tag">Historic confiteria since 1914</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=KYO%20Matcha%20Madrid">KYO Matcha<span class="tag">Best matcha shop Madrid</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🕌 المعالم الإسلامية والتاريخية <span class="count">(1)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Temple%20of%20Debod%20Madrid">Temple of Debod<span class="tag">Egyptian temple sunset views</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🌄 المطلات ومواقع التصوير <span class="count">(4)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Royal%20Palace%20Ledge%20Viewpoint%20Madrid">Royal Palace Ledge Viewpoint<span class="tag">Panoramic Royal Palace view</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Principe%20Pio%20Mountain%20Viewpoint%20Madrid">Principe Pio Mountain Viewpoint<span class="tag">Sunset view Royal Palace</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Palacio%20de%20Cibeles%20Viewpoint%20Madrid">Palacio de Cibeles Viewpoint<span class="tag">360 degree city view</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Viewpoint%20Temple%20of%20Debod%20Madrid">Viewpoint Temple of Debod<span class="tag">Egyptian temple sunset views</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🏛 أسواق وساحات وقصور تاريخية <span class="count">(8)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20de%20San%20Miguel%20Madrid">🏛 Mercado de San Miguel<span class="tag">Iconic iron glass market hall since 1916</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20San%20Anton%20Madrid">🏛 Mercado San Anton<span class="tag">Gourmet market Chueca</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20Anton%20Martin%20Madrid">🏛 Mercado Anton Martin<span class="tag">Authentic local living market</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20de%20San%20Fernando%20Madrid">🏛 Mercado de San Fernando<span class="tag">Old fashioned Lavapies market</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20de%20la%20Cebada%20Madrid">🏛 Mercado de la Cebada<span class="tag">Real local market La Latina</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20de%20la%20Paz%20Madrid">🏛 Mercado de la Paz<span class="tag">Gourmet market Salamanca</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Plaza%20de%20la%20Villa%20Madrid">🏛 Plaza de la Villa<span class="tag">Oldest square in Madrid 15th century</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Royal%20Palace%20of%20Madrid%20Madrid">🏛 Royal Palace of Madrid<span class="tag">Grand royal residence</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🛍 التسوق والآوتلت <span class="count">(5)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Las%20Rozas%20Village%20Outlet%20Madrid">Las Rozas Village Outlet<span class="tag">Luxury outlet mall</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Centro%20Comercial%20Principe%20Pio%20Madrid">Centro Comercial Principe Pio<span class="tag">Mall near Royal Palace</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Plaza%20Rio%202%20Madrid">Plaza Rio 2<span class="tag">Modern riverside mall</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Vaguada%20Madrid">La Vaguada<span class="tag">North Madrid mall</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Centro%20Comercial%20Plenilunio%20Madrid">Centro Comercial Plenilunio<span class="tag">Near airport mall cinema</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🅿️ المواقف <span class="count">(12)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Plaza%20Mayor%20Madrid">Parking Plaza Mayor<span class="tag">Central near Plaza Mayor</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20APK2%20Plaza%20de%20Oriente%20Madrid">Parking APK2 Plaza de Oriente<span class="tag">Under Royal Palace</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Aparcamiento%20Palacio%20de%20los%20Duques%20Madrid">Aparcamiento Palacio de los Duques<span class="tag">Near Royal Palace</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Isabel%20La%20Catolica%20Madrid">Parking Isabel La Catolica<span class="tag">Near Royal Palace</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=ParkingLibre%20Paseo%20del%20Prado%2048%20Madrid">ParkingLibre Paseo del Prado 48<span class="tag">Near Prado Museum</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Las%20Cortes%20Madrid">Parking Las Cortes<span class="tag">Near Prado</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20La%20Latina%20Madrid">Parking La Latina<span class="tag">Historic La Latina district</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Aparcamiento%20Interparking%20Barcelo%20Madrid">Aparcamiento Interparking Barcelo<span class="tag">24h inside ZBE</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Garaje%20Santana%20Madrid">Garaje Santana<span class="tag">Near Gran Via</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20APK2%20Plaza%20del%20Rey%20Madrid">Parking APK2 Plaza del Rey<span class="tag">Central Gran Via access</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Centro%20Canalejas%20Madrid">Parking Centro Canalejas<span class="tag">Central spacious</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Garaje%20AML%20Madrid">Garaje AML<span class="tag">Malasana heart of city</span></a></li>
+          </ul>
+        </div>
+  </section>
+  <section class="city-panel" id="city-Cordoba" style="display:none">
+    <h2 class="city-heading">قرطبة</h2>
+    
+        <div class="cat-block">
+          <h3>🍽 المطاعم <span class="count">(21)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Taberna%20Agora%20Casa%20Bravo%20Cordoba">🏛 Taberna Agora Casa Bravo<span class="tag">Since 1919 near Roman gate</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Taberna%20San%20Miguel%20Casa%20El%20Pisto%20Cordoba">🏛 Taberna San Miguel Casa El Pisto<span class="tag">Century old tradition</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Taberna%20de%20Almodovar%20Cordoba">🏛 La Taberna de Almodovar<span class="tag">Traditional Cordoban</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Taberna%20La%20Montillana%20Cordoba">Taberna La Montillana<span class="tag">Highest rated local</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Casa%20Pepe%20de%20La%20Juderia%20Cordoba">Casa Pepe de La Juderia<span class="tag">Michelin recommended</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Patio%20de%20la%20Juderia%20Cordoba">Restaurante Patio de la Juderia<span class="tag">Flamenco show</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bodegas%20Mezquita%20Corregidor%20Cordoba">Bodegas Mezquita Corregidor<span class="tag">Traditional near Mezquita</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bodegas%20Mezquita%20Cespedes%20Cordoba">Bodegas Mezquita Cespedes<span class="tag">Excellent traditional food</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bodegas%20Mezquita%20Ribera%20Cordoba">Bodegas Mezquita Ribera<span class="tag">Riverside tapas chain</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Esquinita%20de%20la%20Juderia%20Cordoba">La Esquinita de la Juderia<span class="tag">Excellent oxtail lamb</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Umaueyon%20Cordoba">Restaurante Umaueyon<span class="tag">Rooftop halal Moroccan</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Damasco%20Cordoba">Restaurante Damasco<span class="tag">Excellent halal Middle Eastern</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20El%20Rincon%20de%20Carmen%20Cordoba">Restaurante El Rincon de Carmen<span class="tag">Judería hidden gem</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bocaito%20Andalusi%20Halal%20Cordoba">Bocaito Andalusi Halal<span class="tag">Halal food court Mercado Victoria</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Pasillo%20Oriental%20Cordoba">Pasillo Oriental<span class="tag">Excellent Turkish shawarma</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Darna%20Restaurante%20Arabe%20Cordoba">Darna Restaurante Arabe<span class="tag">Arab fusion unique flavors</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Casa%20Siria%20Halal%20Cordoba">La Casa Siria Halal<span class="tag">Authentic Syrian halal</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Perla%20Azul%20Marroqui%20Halal%20Cordoba">La Perla Azul Marroqui Halal<span class="tag">Moroccan patio oasis</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Beity%20Ibn%20Rushd%20Cordoba">Restaurante Beity Ibn Rushd<span class="tag">Mediterranean halal warm service</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Kebab%20Marrakech%20Halal%20Cordoba">Kebab Marrakech Halal<span class="tag">Excellent value fresh halal</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Tea%20Room%20Halal%20Cordoba">Tea Room Halal<span class="tag">Halal breakfast teahouse</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>☕ الكوفيهات ومحلات الشاهي <span class="count">(3)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Arabiga%20Specialty%20Coffee%20Cordoba">Arabiga Specialty Coffee<span class="tag">Best coffee in Cordoba</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=SINGULAR%20Brunch%20y%20cafe%20Cordoba">SINGULAR Brunch y cafe<span class="tag">Riverside brunch</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cafe%20Al%20Yazici%20Cordoba">Cafe Al Yazici<span class="tag">Halal Turkish breakfast</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🕌 المعالم الإسلامية والتاريخية <span class="count">(11)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mezquita%20Catedral%20de%20Cordoba%20Cordoba">Mezquita Catedral de Cordoba<span class="tag">Great Mosque of Cordoba UNESCO</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Medina%20Azahara%20Cordoba">Medina Azahara<span class="tag">Umayyad palace city UNESCO</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Castillo%20Almodovar%20del%20Rio%20Cordoba">Castillo Almodovar del Rio<span class="tag">Umayyad fortress 8th century</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Roman%20Bridge%20of%20Cordoba%20Cordoba">Roman Bridge of Cordoba<span class="tag">Rebuilt by Moors 10th century</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Torre%20de%20la%20Calahorra%20Cordoba">Torre de la Calahorra<span class="tag">Islamic defensive tower</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Puerta%20del%20Puente%20Cordoba">Puerta del Puente<span class="tag">Historic gate Roman-Islamic</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cordoba%20Synagogue%20Cordoba">Cordoba Synagogue<span class="tag">14th century Mudejar synagogue</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Castillo%20de%20Almodovar%20del%20Rio%20Cordoba">Castillo de Almodovar del Rio<span class="tag">Umayyad fortress 8th century Game of Thrones filming site</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mosque%20Cathedral%20Cordoba%20Cordoba">Mosque Cathedral Cordoba<span class="tag">Great Mosque UNESCO masterpiece</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Casa%20Andalusi%20Cordoba">Casa Andalusi<span class="tag">12th century Andalusi house museum</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Banos%20del%20Alcazar%20Califal%20Cordoba">Banos del Alcazar Califal<span class="tag">Caliphal baths ruins</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🌄 المطلات ومواقع التصوير <span class="count">(2)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mirador%20Mezquita%20de%20Cordoba%20Cordoba">Mirador Mezquita de Cordoba<span class="tag">Best Mezquita photo spot</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mirador%20Puente%20Romano%20Cordoba">Mirador Puente Romano<span class="tag">Iconic bridge sunset view</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🏛 أسواق وساحات وقصور تاريخية <span class="count">(6)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20Victoria%20Cordoba">🏛 Mercado Victoria<span class="tag">Modern food hall historic building</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20de%20la%20Corredera%20Cordoba">🏛 Mercado de la Corredera<span class="tag">Traditional produce market</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Plaza%20del%20Potro%20Cordoba">🏛 Plaza del Potro<span class="tag">Mentioned in Don Quixote 16th century fountain</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Plaza%20de%20las%20Tendillas%20Cordoba">🏛 Plaza de las Tendillas<span class="tag">Central city square Gran Capitan statue</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Templo%20Romano%20de%20Cordoba%20Cordoba">🏛 Templo Romano de Cordoba<span class="tag">Ancient Roman temple columns</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Alcazar%20Reyes%20Cristianos%20Cordoba%20Cordoba">🏛 Alcazar Reyes Cristianos Cordoba<span class="tag">Christian kings fortress gardens</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🅿️ المواقف <span class="count">(7)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20la%20Mezquita%20de%20Cordoba%20Cordoba">Parking la Mezquita de Cordoba<span class="tag">Closest to Mezquita</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20La%20Ribera%20Cordoba">Parking La Ribera<span class="tag">Jewish quarter</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Publico%20IC%20Centro%20Historico%20Cordoba">Parking Publico IC Centro Historico<span class="tag">Historic center</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20calle%20sevilla%205%20Cordoba">Parking calle sevilla 5<span class="tag">Central near hotels</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Victory%20Place%20Parking%20Cordoba">Victory Place Parking<span class="tag">Central clean secure</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Cordoba%20Centro%20iPark%20Cordoba">Parking Cordoba Centro iPark<span class="tag">Good value near center</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cordoba%20Parking%20SA%20Cordoba">Cordoba Parking SA<span class="tag">Central cheap</span></a></li>
+          </ul>
+        </div>
+  </section>
+  <section class="city-panel" id="city-Sevilla" style="display:none">
+    <h2 class="city-heading">إشبيلية</h2>
+    
+        <div class="cat-block">
+          <h3>🍽 المطاعم <span class="count">(41)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bodega%20Santa%20Cruz%20Las%20Columnas%20Sevilla">🏛 Bodega Santa Cruz Las Columnas<span class="tag">Classic tavern near Cathedral</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Rinconcillo%20Sevilla">🏛 El Rinconcillo<span class="tag">Oldest bar in Seville</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bodega%20Gongora%20Sevilla">🏛 Bodega Gongora<span class="tag">Traditional Andalusian tapas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bodega%20Diaz-Salazar%20Sevilla">🏛 Bodega Diaz-Salazar<span class="tag">Classic tavern</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Bodega%20de%20la%20Alfalfa%20Sevilla">🏛 La Bodega de la Alfalfa<span class="tag">Popular traditional tapas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Al%20Wadi%20Sevilla">Al Wadi<span class="tag">Halal Middle Eastern</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Rincon%20de%20Beirut%20Sevilla">El Rincon de Beirut<span class="tag">Halal Lebanese</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Beirutina%20Sevilla">Beirutina<span class="tag">Lebanese</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Sella%20Sevilla">El Sella<span class="tag">Triana district Spanish</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Lola%20por%20Dios%20Alameda%20Sevilla">Lola por Dios Alameda<span class="tag">Great tapas Alameda</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Espacio%20Eslava%20Sevilla">Espacio Eslava<span class="tag">Award winning tapas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cerveceria%20Alameda%20Sevilla">Cerveceria Alameda<span class="tag">Terrace breakfast tapas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Disparate%20Sevilla">El Disparate<span class="tag">Fine dining Alameda</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Marabunda%20Sevilla%20Sevilla">Marabunda Sevilla<span class="tag">Fusion tapas bar</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Tanto%20Monta%20Sevilla">Tanto Monta<span class="tag">Only halal tapas restaurant in town</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Arabesca%20Sevilla">Arabesca<span class="tag">Central halal Middle Eastern</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Alrayyan%20Halal%20Sevilla">Alrayyan Halal<span class="tag">Homemade tajine shawarma rolls</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Al-Medina%20Moroccan%20Sevilla">Al-Medina Moroccan<span class="tag">Authentic Moroccan tea</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Beirutina%20Halal%20Sevilla">Beirutina Halal<span class="tag">Best Lebanese breakfast lunch dinner</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fez%20Moroccan%20Sevilla">Fez Moroccan<span class="tag">Beautiful Moroccan tiles decor</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Carniceria%20Halal%20Arahma%20Amine%20Sevilla">Carniceria Halal Arahma Amine<span class="tag">Halal butcher restaurant fresh meat</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Golden%20Kebab%20Halal%20Sevilla">Golden Kebab Halal<span class="tag">Budget halal kebab</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Doner%20Kebab%20Nervion%20Halal%20Sevilla">Doner Kebab Nervion Halal<span class="tag">Best value halal kebab</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Kebab%20Santa%20Justa%20Halal%20Sevilla">Kebab Santa Justa Halal<span class="tag">Near train station halal</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Kebab%20Al%20Andalus%20Sevilla">Kebab Al Andalus<span class="tag">Turkish pizza and kebab</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Don%20Kebab%20Halal%20Sevilla">Don Kebab Halal<span class="tag">Halal falafel shawarma</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Kebab%20Salahdin%20Halal%20Sevilla">Kebab Salahdin Halal<span class="tag">Large portions halal</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Il%20Ristorantino%20Dellavvocato%20Sevilla">Il Ristorantino Dellavvocato<span class="tag">Best pizza in Seville</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Casa%20del%20Tesorero%20Sevilla">La Casa del Tesorero<span class="tag">Historic building Italian</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Il%20Ristorantino%20Calle%20Cuna%20Sevilla">Il Ristorantino Calle Cuna<span class="tag">Authentic Neapolitan pizza</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Al%20Solito%20Posto%20Sevilla">Al Solito Posto<span class="tag">Full gluten free menu</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Alimentari%20e%20Diversi%20Sevilla">Alimentari e Diversi<span class="tag">Outstanding cacio e pepe</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Alimentari%20Bartolome%20Medina%20Sevilla">Alimentari Bartolome Medina<span class="tag">Best risotto authentic</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bollywood%20Indian%20Restaurant%20Sevilla">Bollywood Indian Restaurant<span class="tag">Excellent curries biryani</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Indian%20Flavours%20Sevilla">Restaurante Indian Flavours<span class="tag">Rich aromatic authentic</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Taj%20Mahal%20Sevilla%20Sevilla">Restaurante Taj Mahal Sevilla<span class="tag">Halal classic Indian dishes</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Mumbai%20Sevilla">Restaurante Mumbai<span class="tag">Good vegetarian curry</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mary%27s%20Place%20Diner%20Sevilla">Mary's Place Diner<span class="tag">Fresh American diner burgers</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=D10%20BURGUERBAR%20Sevilla">D10 BURGUERBAR<span class="tag">Amazing smash burgers</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Fuegote%20Smash%20and%20Cheese%20Sevilla">Fuegote Smash and Cheese<span class="tag">Great smash burgers cozy</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Street%20Food%20Burger%20Bermejales%20Sevilla">Street Food Burger Bermejales<span class="tag">Best burger lotus fries</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>☕ الكوفيهات ومحلات الشاهي <span class="count">(4)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hispalis%20Cafe%20Sevilla">Hispalis Cafe<span class="tag">Local coffee</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Mala%20Brunch%20Rivero%20Sevilla">La Mala Brunch Rivero<span class="tag">Popular brunch</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Teteria%20Al%20Sultan%20Sevilla">Teteria Al Sultan<span class="tag">Arabic tea house</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Habibi%20Shisha%20Lounge%20Sevilla">Habibi Shisha Lounge<span class="tag">Great shisha calm atmosphere</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🕌 المعالم الإسلامية والتاريخية <span class="count">(4)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Real%20Alcazar%20de%20Sevilla%20Sevilla">Real Alcazar de Sevilla<span class="tag">Royal palace UNESCO</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Giralda%20Sevilla">La Giralda<span class="tag">Almohad minaret 12th century</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Torre%20del%20Oro%20Sevilla">Torre del Oro<span class="tag">Almohad watchtower 13th century</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Royal%20Alcazar%20of%20Seville%20Sevilla">Royal Alcazar of Seville<span class="tag">Moorish Gothic Renaissance palace</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🌄 المطلات ومواقع التصوير <span class="count">(3)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Mirador%20de%20Querencia%20Rooftop%20Sevilla">El Mirador de Querencia Rooftop<span class="tag">Cathedral rooftop view</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mirador%20Torre%20Sevilla%20Sevilla">Mirador Torre Sevilla<span class="tag">360 tower view</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Setas%20de%20Sevilla%20Sevilla">Setas de Sevilla<span class="tag">Iconic mushroom structure view</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🏛 أسواق وساحات وقصور تاريخية <span class="count">(7)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Casa%20de%20Pilatos%20Sevilla">🏛 Casa de Pilatos<span class="tag">Mudejar Renaissance palace</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20de%20Triana%20Sevilla">🏛 Mercado de Triana<span class="tag">Best local food market Triana</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mercado%20de%20la%20Encarnacion%20Sevilla">🏛 Mercado de la Encarnacion<span class="tag">Market beneath Las Setas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Plaza%20de%20San%20Francisco%20Sevilla">🏛 Plaza de San Francisco<span class="tag">Historic city hall square</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Palacio%20de%20las%20Duenas%20Sevilla">🏛 Palacio de las Duenas<span class="tag">Duchess of Alba residence gardens</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Antiquarium%20Sevilla%20Sevilla">🏛 Antiquarium Sevilla<span class="tag">Roman Almohad ruins under Setas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Palace%20Countess%20of%20Lebrija%20Sevilla">🏛 Palace Countess of Lebrija<span class="tag">Roman mosaics tile work</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🛍 التسوق والآوتلت <span class="count">(2)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Sevilla%20Fashion%20Outlet%20Sevilla">Sevilla Fashion Outlet<span class="tag">Outlet mall</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Torre%20Sevilla%20Mall%20Sevilla">Torre Sevilla Mall<span class="tag">Shopping center by river</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🅿️ المواقف <span class="count">(8)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Paseo%20de%20Colon%20Sevilla">Parking Paseo de Colon<span class="tag">Near Cathedral riverside</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Imagen%20Sevilla">Parking Imagen<span class="tag">City center</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20APK2%20Magdalena%20Sevilla">Parking APK2 Magdalena<span class="tag">Near Cathedral</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Avenida%20Roma%20Car%20Park%20Sevilla">Avenida Roma Car Park<span class="tag">Near historic center</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Mercado%20del%20Arenal%20Sevilla">Parking Mercado del Arenal<span class="tag">Near Cathedral popular</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20APK2%20Arjona%20Sevilla">Parking APK2 Arjona<span class="tag">Cheapest day rate</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Aparcamiento%20Interparking%20Cano%20Cueto%20Sevilla">Aparcamiento Interparking Cano Cueto<span class="tag">Near Santa Cruz quarter</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Saba%20Plaza%20de%20Armas%20Sevilla">Parking Saba Plaza de Armas<span class="tag">Near bus station</span></a></li>
+          </ul>
+        </div>
+  </section>
+  <section class="city-panel" id="city-Granada" style="display:none">
+    <h2 class="city-heading">غرناطة</h2>
+    
+        <div class="cat-block">
+          <h3>🍽 المطاعم <span class="count">(34)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Carmen%20El%20Agua%20Granada">Restaurante Carmen El Agua<span class="tag">Alhambra view</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Casa%20Gabriel%20Granada">Casa Gabriel<span class="tag">Albaicin traditional</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Las%20Tomasas%20Granada">Las Tomasas<span class="tag">Best Alhambra view dining</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Carmen%20De%20Aben%20Humeya%20Granada">Restaurante Carmen De Aben Humeya<span class="tag">Upscale Alhambra view</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Rincon%20de%20Julio%20Granada">El Rincon de Julio<span class="tag">Highest rated in Granada</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Orejas%20Cocinalenta%20Granada">El Orejas Cocinalenta<span class="tag">Outstanding tasting menu</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Perromedio%20Granada">Perromedio<span class="tag">Hidden gem burrata croquetas</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Telefonica%20Granada">La Telefonica<span class="tag">Andalusian specialties</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Manigua%20Bar%20Granada">Manigua Bar<span class="tag">Fine dining tasting menu</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Layali%20Granada">Restaurante Layali<span class="tag">Top rated Moroccan tagine</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Buffet%20Halal%20Gran%20Via%20Granada">Buffet Halal Gran Via<span class="tag">Unlimited halal buffet</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Teteria%20Alhambra%20Halal%20Granada">Teteria Alhambra Halal<span class="tag">Halal Moroccan tea house</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Taj%20Halal%20Granada">El Taj Halal<span class="tag">Central halal tagine wraps</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Puerta%20de%20Syria%20Granada">La Puerta de Syria<span class="tag">Authentic Syrian fresh flavors</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=RESTAURANTE%20LAS%20PALMERAS%20Granada">RESTAURANTE LAS PALMERAS<span class="tag">Halal seafood paella tajine</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=RESTAURANTE%20TETERIA%20RIAD%20ELVIRA%20Granada">RESTAURANTE TETERIA RIAD ELVIRA<span class="tag">Beautiful decor halal couscous</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bongo%20Granada%20Granada">Bongo Granada<span class="tag">Halal lasagne fine dining</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Castillo%20de%20Aleppo%20Granada">Castillo de Aleppo<span class="tag">Excellent halal near mosque</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Habibi%20Restaurant%20Granada">Habibi Restaurant<span class="tag">Best kebab cheap and fresh</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bab%20Mansour%20Granada">Bab Mansour<span class="tag">Moroccan Lebanese authentic</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Tajin%20Dar%20Granada">Restaurante Tajin Dar<span class="tag">Moroccan tajine near mosque</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Arrayanes%20Granada">Restaurante Arrayanes<span class="tag">Authentic Moroccan cultural experience</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Palestina%20Granada">Restaurante Palestina<span class="tag">Excellent Palestinian halal</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Balcon%20de%20San%20Nicolas%20Granada">El Balcon de San Nicolas<span class="tag">Spectacular Alhambra view dining</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Piccola%20Carmela%20Granada">La Piccola Carmela<span class="tag">Delicious pasta central</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=BAMBOLA%20CENTRO%20Granada">BAMBOLA CENTRO<span class="tag">Great pizza sangria</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Nonna%20Carmela%20Granada">La Nonna Carmela<span class="tag">Gluten free Bib-Rambla square</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=DITALY%20Granada">DITALY<span class="tag">Best calzone pizza</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Bambola%20Albayda%20Granada">Bambola Albayda<span class="tag">Excellent pizza pasta</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=cacho%20and%20pepe%20Granada">cacho and pepe<span class="tag">Homemade pasta hidden gem</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Thali%20Indian%20Restaurant%20Granada">Thali Indian Restaurant<span class="tag">Halal great thali variety</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Maharaja%20Restaurante%20Indio%20Granada">Maharaja Restaurante Indio<span class="tag">Flavorful curries patio</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Muglia%20Indian%20Granada">Muglia Indian<span class="tag">Excellent korma naan</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Turkish%20Kebab%20Tacos%20Granada">Turkish Kebab Tacos<span class="tag">Best kebab halal friendly</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>☕ الكوفيهات ومحلات الشاهي <span class="count">(15)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Despiertoo%20Specialty%20Coffee%20Granada">Despiertoo Specialty Coffee<span class="tag">Specialty coffee</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Finca%20Coffee%20Granada">La Finca Coffee<span class="tag">Popular roastery</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=DCS%20Gastro%20Cafe%20Granada">DCS Gastro Cafe<span class="tag">Breakfast and brunch</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cafeteria%20dSano%20Granada">Cafeteria dSano<span class="tag">Top rated breakfast</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Teteria%20Dar%20Ziryab%20Granada">Teteria Dar Ziryab<span class="tag">Cozy no shisha authentic baklava</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Teteria%20Nazari%20Granada">Teteria Nazari<span class="tag">Homemade sweets great shisha</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Teteria%20Restaurante%20Kasbah%20Granada%20Granada">Teteria Restaurante Kasbah Granada<span class="tag">Moroccan cuisine belly dancer</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Teteria%20Palacio%20Nazari%20Granada">Teteria Palacio Nazari<span class="tag">Great variety of teas cozy ambience</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Alfaguara%20Tea%20House%20Granada">Alfaguara Tea House<span class="tag">Best food harira soup tajine cave nook</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Teteria%20El%20Basha%20Granada">Teteria El Basha<span class="tag">Excellent baklava pistachio nest</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Teteria%20Baghdad%20Granada">Teteria Baghdad<span class="tag">Best falafel wraps must visit</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Assirat%20Tea%20house%20Granada">Assirat Tea house<span class="tag">Halal food authentic Arabic cuisine</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Teteria%20El%20Banuelo%20Granada">Teteria El Banuelo<span class="tag">Terrace view over city grapevine canopy</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Huerto%20del%20Loro%20Granada">Huerto del Loro<span class="tag">Stunning sunset views cityscape</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Overlook%20Albaicin%20Granada">Overlook Albaicin<span class="tag">Quiet beautiful morning view</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🕌 المعالم الإسلامية والتاريخية <span class="count">(15)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Alhambra%20and%20Generalife%20Granada">Alhambra and Generalife<span class="tag">Nasrid palace complex UNESCO</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=El%20Banuelo%20Arab%20Baths%20Granada">El Banuelo Arab Baths<span class="tag">11th century Islamic baths</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Corral%20del%20Carbon%20Granada">Corral del Carbon<span class="tag">Nasrid merchant inn 14th century</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Palacio%20de%20Dar%20al-Horra%20Granada">Palacio de Dar al-Horra<span class="tag">Nasrid queen's palace</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Casa%20del%20Chapiz%20Granada">Casa del Chapiz<span class="tag">Andalusi house with gardens</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Puerta%20de%20Birrambla%20Granada">Puerta de Birrambla<span class="tag">Historic Nasrid gate</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Puerta%20de%20Elvira%20Granada">Puerta de Elvira<span class="tag">Original city gate</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Silla%20del%20Moro%20Granada">Silla del Moro<span class="tag">Small fortress above Alhambra</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=La%20Alcaiceria%20Granada">La Alcaiceria<span class="tag">Original Nasrid silk bazaar souk</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Palacio%20de%20la%20Madraza%20Granada">Palacio de la Madraza<span class="tag">First Islamic university in Al-Andalus 1349</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Torres%20Bermejas%20Granada">Torres Bermejas<span class="tag">Red towers Alhambra defense fortress</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Carrera%20del%20Darro%20Granada">Carrera del Darro<span class="tag">Most romantic Andalusi era street</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hammam%20Al%20Andalus%20Granada">Hammam Al Andalus<span class="tag">Arab bath spa inspired by Alhambra baths</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Nasrid%20Palaces%20Granada">Nasrid Palaces<span class="tag">Highlight of Alhambra complex</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Generalife%20Gardens%20Granada">Generalife Gardens<span class="tag">Peaceful Nasrid summer gardens</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🌄 المطلات ومواقع التصوير <span class="count">(5)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mirador%20de%20San%20Nicolas%20Granada">Mirador de San Nicolas<span class="tag">Best Alhambra view</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=San%20Miguel%20Alto%20Viewpoint%20Granada">San Miguel Alto Viewpoint<span class="tag">Quiet Alhambra panorama</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mirador%20de%20San%20Cristobal%20Granada">Mirador de San Cristobal<span class="tag">Peaceful Alhambra view</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Mirador%20Placeta%20de%20Carvajales%20Granada">Mirador Placeta de Carvajales<span class="tag">Close Alhambra photo spot</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Cruz%20Mirador%20San%20Nicolas%20Granada">Cruz Mirador San Nicolas<span class="tag">Best Alhambra panorama sculpture</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🏛 أسواق وساحات وقصور تاريخية <span class="count">(3)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Plaza%20Bib-Rambla%20Granada">🏛 Plaza Bib-Rambla<span class="tag">Historic Nasrid square with fountain</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Casa%20de%20los%20Tiros%20Museum%20Granada">🏛 Casa de los Tiros Museum<span class="tag">Nasrid era mansion museum free entry</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Palace%20of%20Charles%20V%20Granada">🏛 Palace of Charles V<span class="tag">Renaissance palace inside Alhambra</span></a></li>
+          </ul>
+        </div>
+        <div class="cat-block">
+          <h3>🅿️ المواقف <span class="count">(5)</span></h3>
+          <ul class="place-grid">
+            <li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20Indigo%20Alhambra%20Granada">Parking Indigo Alhambra<span class="tag">Closest to Alhambra</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20San%20Cristobal%20Albaicin%20Granada">Parking San Cristobal Albaicin<span class="tag">Near Albaicin</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Parking%20San%20Agustin%20Granada">Parking San Agustin<span class="tag">Near Cathedral</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Garaje%20Gran%20Capitan%20Granada">Garaje Gran Capitan<span class="tag">City center</span></a></li>
+<li><a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Severo%20Ochoa%20Parking%20Granada">Severo Ochoa Parking<span class="tag">Large central lot</span></a></li>
+          </ul>
+        </div>
+  </section>
+</div>
+
+<footer>درب الأندلس — صفحة مرجعية شاملة. اضغط أي اسم لفتحه في خرائط قوقل مباشرة.</footer>
+
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.city-panel').forEach(p => p.style.display = 'none');
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.city).style.display = 'block';
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+});
+</script>
+
+</body>
+</html>
