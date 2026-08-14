@@ -100,21 +100,28 @@
 
 <script>
 (function(){
-  const KEY = "andalus_booking_checklist_v1";
+  const LOCAL_KEY = "andalus_booking_checklist_v1";
+  // Shared cloud bucket — everyone who opens this page reads/writes the SAME data here.
+  const SHARED_URL = "https://kvdb.io/andalus-yasir-trip-2026/booking-checklist";
+
   const items = document.querySelectorAll('.item');
   const progressBar = document.getElementById('progressBar');
   const progressLabel = document.getElementById('progressLabel');
+  const syncBadge = document.createElement('div');
+  syncBadge.style.cssText = 'text-align:center; font-size:.72rem; color:var(--ink-soft); margin-top:8px;';
+  document.querySelector('.progress-card').appendChild(syncBadge);
 
-  function loadState(){
-    try{ return JSON.parse(localStorage.getItem(KEY)) || {}; }catch(e){ return {}; }
+  function loadLocal(){
+    try{ return JSON.parse(localStorage.getItem(LOCAL_KEY)) || {}; }catch(e){ return {}; }
   }
-  function saveState(state){ localStorage.setItem(KEY, JSON.stringify(state)); }
+  function saveLocal(state){ localStorage.setItem(LOCAL_KEY, JSON.stringify(state)); }
 
-  // Default: flight and Alhambra pre-checked (already confirmed booked)
-  let state = loadState();
-  if(Object.keys(state).length === 0){
-    state = { flight: true, alhambra: true };
-    saveState(state);
+  function applyState(state){
+    items.forEach(item => {
+      const key = item.dataset.key;
+      item.classList.toggle('checked', !!state[key]);
+    });
+    updateProgress();
   }
 
   function updateProgress(){
@@ -124,18 +131,51 @@
     progressLabel.textContent = `${done} / ${total}`;
   }
 
+  let state = loadLocal();
+  if(Object.keys(state).length === 0){
+    state = { flight: true, alhambra: true };
+  }
+  applyState(state); // show something instantly, then try to sync
+
+  // Try to pull the shared (everyone's) version from the cloud.
+  syncBadge.textContent = '🔄 يتزامن مع الجميع...';
+  fetch(SHARED_URL)
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(sharedState => {
+      state = sharedState;
+      saveLocal(state);
+      applyState(state);
+      syncBadge.textContent = '✅ متزامن مع الجميع';
+    })
+    .catch(() => {
+      // First time ever, or offline: push our local/default state up as the shared starting point.
+      pushShared(state);
+      syncBadge.textContent = '📶 وضع محلي (بدون اتصال)';
+    });
+
+  function pushShared(newState){
+    fetch(SHARED_URL, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newState)
+    }).then(r => {
+      syncBadge.textContent = r.ok ? '✅ متزامن مع الجميع' : '📶 وضع محلي (بدون اتصال)';
+    }).catch(() => {
+      syncBadge.textContent = '📶 وضع محلي (بدون اتصال)';
+    });
+  }
+
   items.forEach(item => {
     const key = item.dataset.key;
-    if(state[key]) item.classList.add('checked');
     item.addEventListener('click', () => {
       item.classList.toggle('checked');
       state[key] = item.classList.contains('checked');
-      saveState(state);
+      saveLocal(state);
       updateProgress();
+      syncBadge.textContent = '🔄 يحفظ للجميع...';
+      pushShared(state);
     });
   });
-
-  updateProgress();
 })();
 </script>
 
